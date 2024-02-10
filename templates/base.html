@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load django_bootstrap5  %} 
+    {% load static  %} 
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/content.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <title>{% block title %} {% endblock %}</title>
+  </head>
+  <body data-bs-theme="dark">
+    {% include 'partials/_navbar.html' %}
+    {% block content %} {% endblock %}
+    {% include 'partials/_footer.html' %} 
+    {% bootstrap_javascript %}
+  </body>
+</html>
